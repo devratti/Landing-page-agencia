@@ -3,6 +3,7 @@
 	box-sizing: border-box ;
 	padding: 0;
 	margin: 0;
+	/*outline: 1px solid red;*/
 }
 
 .navbar {
@@ -64,24 +65,65 @@
 .headline {
 	display: flex;
 	flex-direction: column;
-	width: 50%;
+	align-items: center;
 	text-align: center;
 	justify-content: center;
 	color: #180f4a;
+	flex: 1;
 }
+.h2-1 {
+	font-size: 26px;
+	letter-spacing: 0.4rem;
+}
+.h2-2 {
+	font-size: 60px;
+}
+
 .headline p {
+	font-size: 17px;
 	color: gray;
 	width: 400px;
 	align-self: center;
 }
 .img-container {
-    width: 50%;	
+	flex: 1.3;	
 }
 .img {
 	width: 100%;
 	height: 100%;
 }
 .cta-btn {
+    text-decoration: none;
+    font-size: 20px;
+    color: white;
+    padding: 15px 18px;
+    border-radius: 28px;
+    width: fit-content;
+    margin-top: 15px;
+
+    background: linear-gradient(135deg, #4b1fa6, #9473fd);
+
+    box-shadow: 0 0 20px rgba(148, 115, 253, 0.45);
+
+    transition: 
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        background 0.25s ease;
+}
+
+.cta-btn:hover {
+    transform: translateY(-3px) scale(1.03);
+    background: linear-gradient(135deg, #5f2fd6, #b69cff);
+    box-shadow: 0 0 30px rgba(148, 115, 253, 0.75);
+}
+
+.cta-btn:active {
+    transform: scale(0.97);
+    background: linear-gradient(135deg, #3a1480, #7f5fe6);
+    box-shadow: 0 0 12px rgba(148, 115, 253, 0.5);
+} 
+
+/*.cta-btn {
 	text-decoration: none;
 	font-size: 20px;
 	background-color: #9473fd;
@@ -96,7 +138,7 @@
 	transform: scale(1.05);
 	transition: transform 0.3s ease;
 }
-
+*/
 .container {
 	margin-top: 50px;
 	min-height: 400px;
@@ -142,7 +184,7 @@
 	background-color: #9473fd;
 	padding: 40px;
 	transform: scale(1.09);
-	transition: transform 0.3s ease, background-color 0.3s ease;
+	transition: transform 0.4s ease, background-color 0.3s ease;
 	box-shadow: 0 30px 80px rgba(0, 0, 0, 0.45);
 	margin: 2px;
 }
@@ -160,7 +202,7 @@ gap: 15px;
 }
 
 footer {
-	margin-top: 100px;
+	margin-top: 150px;
 	min-height: 200px;
 	background-image: linear-gradient(180deg, #180f4a,#090422, black);
 	border-top: 3px solid #9473fd;
@@ -171,7 +213,7 @@ footer {
 	padding: 75px;
 }
 footer p {
-	margin-top: 10px;
+	margin-top: 18px;
 	color: white;
 }
 .agencia {
@@ -181,4 +223,136 @@ footer p {
 }
 footer span {
 	color: white;
+}
+
+@media (min-width: 1400px) {
+	.logo {
+		font-size: 45px;
+	}
+	.links a {
+		font-size: 26px;
+	} 
+	.h2-1 {
+		font-size: 32px;
+	}
+	.h2-2 {
+		font-size: 75px;
+	}
+	.headline p {
+		font-size: 24px;
+		line-height: 1.2;
+		width: 500px;
+	}
+	.cta-btn {
+		font-size: 26px;
+	}
+	.card h3 {
+		font-size: 28px;
+	}
+	.card p {
+		font-size: 22px;
+		line-height: 1.2;
+	}
+	.content p {
+		font-size: 22px;
+	}
+	footer span {
+		font-size: 20px;
+	}
+	.agencia {
+		font-size: 50px;
+	}
+}
+@media (max-width: 778px) {
+	#btn {
+		display: none;
+	}
+	.hero { 
+		flex-direction:column;
+		align-content: center; 
+		justify-content: center;
+		flex-wrap: wrap;
+		gap: 15px;
+		margin-top: 40px;
+	}
+	.h2-1 {
+		font-size: 35px;
+		width: 31ch;
+	}
+	.h2-2 {
+		font-size: 70px;
+		width: 14ch;
+	}
+	.headline p {
+		margin-top: 10px;
+		margin-bottom: 10px;
+		font-size: 20px;
+		width: 450px;
+	}
+	.card:hover {
+		transform: scale(1.05);
+	}
+}
+@media (max-width: 540px) {
+	.links {
+		display: none;
+	}
+	.logo {
+		width: 11ch;
+		font-size: 48px;
+		letter-spacing: 2px;
+	}
+	.h2-1 {
+		width: 29ch;
+		letter-spacing: 9px;
+		font-size: 32px;
+	}
+	.h2-2 {
+		width: 14ch;
+		font-size: 60px;
+	}
+	.headline p {
+		margin-bottom: 5px;
+		font-size: 18px;
+		width: 470px;
+	}
+}
+@media (max-width: 470px) {
+	.logo {
+
+	}
+	.h2-1 {
+    width: 90%;
+    letter-spacing: 0.3rem;
+    font-size: 1.3rem;
+}
+	.h2-2 {
+    width: 90%;
+    max-width: 400px;
+    font-size: 2.5rem;
+}
+	.headline p {
+	margin-bottom: 1px;
+    font-size: 16px;
+    width: 90%;
+	}
+}
+.p-mobile {
+	display: none;
+}
+@media (max-width: 430px) {
+	.p-mobile {
+		display: block;
+		width: 90%;
+		max-width: 400px;
+	}
+	.p-desktop {
+		display: none;
+	}
+
+}
+@media (max-width: 339px) {
+	.h2-1 {
+		font-size: 1.3rem;
+	}
 }
